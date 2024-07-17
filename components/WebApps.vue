@@ -1,12 +1,30 @@
 <script setup >
+const items = [
+  {title : 'Bantukerja - bantukerja.com',
+    menu : 'Bantukerja',
+    url : 'https://bantukerja.com',
+    description : 'Bantu Kerja adalah platform berbasis web untuk membentuk kesiapan kerja generasi muda Indonesia (usia 14 - 24 tahun) lewat pembelajaran berbasis projek (Work-Based Learning) dengan berbagai modul belajar dan projek magang.',
+    stacks : ['PHP','Laravel 6','Bootstrap', 'Jquery', 'Vue 2'],
+    contribution : ['Creating notification system for user side','Admin dashboard backend','Subscription system and integrating payment gateway','User Realtime Chat'],
+    images : ['bk/slide5.png','bk/slide1.png','bk/slide2.png','bk/slide3.png','bk/slide4.png']
+  }
+]
 
+const selected = ref(items[0]);
+const currentSlide = ref(0);
+
+function slideTo(v)
+{
+  currentSlide.value = v;
+  console.log(currentSlide.value)
+}
 </script>
 
 <template>
 <section>
   <div class="h-screen flex flex-col items-center justify-center">
-    <div class="w-full  flex flex-col gap-12">
-      <h1 class="text-4xl font-bold text-right">Web Apps</h1>
+    <div class="w-full flex flex-col gap-12">
+      <h1 class="text-3xl font-bold text-right">Web Apps</h1>
       <nav class=" h-20 w-full  items-center text-gray-700 flex flex-row gap-4  max-h-32 z-10 rounded-3xl">
 
         <div class="grow">
@@ -34,16 +52,23 @@
       </nav>
     </div>
     <div class="grid grid-cols-2 mt-5 ">
-      <div class="flex flex-col ">
-        <div>
-          <img src="../public/slide1.png" alt="" class="rounded-2xl">
-        </div>
-        <div class="flex flex-row gap-3 my-3 max-h-28 justify-between ">
-          <img src="../public/bk/slide1.png" alt="" class=" rounded-lg">
-          <img src="../public/bk/slide2.png" alt="" class=" rounded-lg">
-          <img src="../public/bk/slide3.png" alt="" class="rounded-lg">
-          <img src="../public/bk/slide4.png" alt="" class=" rounded-lg">
-        </div>
+      <div class="flex flex-col gap-3">
+        <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide" class=" rounded-2xl overflow-clip">
+          <Slide v-for="slide in selected.images" :key="slide" >
+            <div class="carousel__item h-full"><img :src="slide" alt="" class="h-full object-coverstatus"></div>
+          </Slide>
+        </Carousel>
+
+        <Carousel
+            id="thumbnails"
+            :items-to-show="4"
+            v-model="currentSlide"
+            ref="carousel"
+        >
+          <Slide v-for="(slide,index) in selected.images" :key="slide" class="m-1 rounded-xl overflow-clip !w-full hover:scale-125 transition ease-in-out hover:z-50">
+            <div class="carousel__item"  @click="slideTo(index)"><img :src="slide" alt=""></div>
+          </Slide>
+        </Carousel>
       </div>
       <div class="text-right flex flex-col gap-5 ms-12">
         <h1 class="font-bold text-2xl">Bantukerja - bantukerja.com</h1>
@@ -70,7 +95,10 @@
 
 </section>
 </template>
-
 <style scoped>
-
+:deep(#thumbnails  .carousel__track){
+  display: grid ;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
 </style>

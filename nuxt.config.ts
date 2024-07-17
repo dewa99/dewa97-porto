@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
     devtools: { enabled: true },
-    modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image"],
+    modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "vue3-carousel-nuxt"],
     fonts : {
         families : [
             {name : "Roboto", provider : 'google'}

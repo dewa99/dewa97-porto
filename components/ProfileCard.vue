@@ -8,20 +8,9 @@ const timeline = [
 
 <template>
     <section>
-      <div class="grid gap-x-80 grid-cols-3 h-screen items-center">
-        <div class="">
-          <ol class="relative border-s border-gray-100 dark:border-gray-700">
-            <li class="ms-4 mb-4" v-for="item in timeline">
-              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{{item.year}}</time>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{item.title}}</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">{{item.description}}</p>
-            </li>
-          </ol>
-        </div>
-        <div class="flex flex-row col-span-2 justify-end">
-          <img src="../public/man(1).png" alt="" class="max-w-48 mx-3">
-          <div>
+      <div class="grid grid-rows-2 h-screen items-center">
+        <div class="flex flex-row  gap-3">
+          <div class="my-auto ms-2">
             <h1 class="text-4xl font-bold">Introducing , me!</h1>
             <p class="mt-5">I was born at Jember East Java Indonesia on first August 1997. <br>
               Technology was my first interest in my life, i started operating personal computer at 10 playing "Game House's" games.
@@ -31,7 +20,19 @@ const timeline = [
               <br> And that's how is my career begin!
             </p>
           </div>
+          <img src="../public/man(1).png" alt="" class="max-w-48 ml-auto mr-4">
         </div>
+        <div class="mb-auto ms-1">
+          <ol class="relative border-s border-gray-100 dark:border-gray-700">
+            <li class="ms-4 mb-4" v-for="item in timeline">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{{item.year}}</time>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{item.title}}</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">{{item.description}}</p>
+            </li>
+          </ol>
+        </div>
+
       </div>
     </section>
 </template>
