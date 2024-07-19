@@ -1,12 +1,23 @@
 <script setup >
+
 const items = [
   {title : 'Bantukerja - bantukerja.com',
     menu : 'Bantukerja',
+    icon : 'bantukerja.png',
     url : 'https://bantukerja.com',
     description : 'Bantu Kerja adalah platform berbasis web untuk membentuk kesiapan kerja generasi muda Indonesia (usia 14 - 24 tahun) lewat pembelajaran berbasis projek (Work-Based Learning) dengan berbagai modul belajar dan projek magang.',
     stacks : ['PHP','Laravel 6','Bootstrap', 'Jquery', 'Vue 2'],
     contribution : ['Creating notification system for user side','Admin dashboard backend','Subscription system and integrating payment gateway','User Realtime Chat'],
     images : ['bk/slide5.png','bk/slide1.png','bk/slide2.png','bk/slide3.png','bk/slide4.png']
+  },
+  {title : 'Bantubelajar Website - bantubelajar.co.id',
+    menu : 'Bantubelajar',
+    icon : 'bantubelajar.png',
+    url : 'https://bantukerja.com',
+    description : 'Bantu Kerja adalah platform berbasis web untuk membentuk kesiapan kerja generasi muda Indonesia (usia 14 - 24 tahun) lewat pembelajaran berbasis projek (Work-Based Learning) dengan berbagai modul belajar dan projek magang.',
+    stacks : ['PHP','Laravel 6','Bootstrap', 'Jquery', 'Vue 2'],
+    contribution : ['Creating notification system for user side','Admin dashboard backend','Subscription system and integrating payment gateway','User Realtime Chat'],
+    images : ['bb/slide1.png','bb/slide2.png','bb/slide3.png','bb/slide4.png','bb/slide5.png']
   }
 ]
 
@@ -18,6 +29,12 @@ function slideTo(v)
   currentSlide.value = v;
   console.log(currentSlide.value)
 }
+
+function select(index)
+{
+  selected.value = items[index]
+}
+
 </script>
 
 <template>
@@ -29,22 +46,10 @@ function slideTo(v)
 
         <div class="grow">
           <div class="flex flex-row justify-center mr-6 gap-5">
-            <div >
-              <button class="py-2 px-3 bg-gray-100  hover:bg-coffee-light rounded-2xl flex flex-row gap-2">
-                <img src="../public/bantukerja.png" alt="" class="h-7 w-7 rounded-lg object-contain"
-                ><span>Bantukerja</span>
-              </button>
-            </div>
-            <div >
-              <button class="py-2 px-3 bg-gray-100  hover:bg-coffee-light hover:bg-coffee-light rounded-2xl flex flex-row gap-2">
-                <img src="../public/bantubelajar.png" alt="" class="h-7 w-7 rounded-lg object-contain"
-                ><span>Bantubelajar</span>
-              </button>
-            </div>
-            <div >
-              <button class="py-2 px-3 bg-gray-100  hover:bg-coffee-light hover:bg-coffee-light rounded-2xl flex flex-row gap-2">
-                <img src="../public/klipingmu.png" alt="" class="h-7 w-7 rounded-lg object-contain"
-                ><span>Klipingmu</span>
+            <div v-for="(item,index) in items">
+              <button class="py-2 px-3 bg-gray-100  hover:bg-coffee-light rounded-2xl flex flex-row gap-2" @click="select(index)">
+                <img :src="item.icon" alt="" class="h-7 w-7 rounded-lg object-contain"
+                ><span>{{ item.menu}}</span>
               </button>
             </div>
           </div>
@@ -71,23 +76,15 @@ function slideTo(v)
         </Carousel>
       </div>
       <div class="text-right flex flex-col gap-5 ms-12">
-        <h1 class="font-bold text-2xl">Bantukerja - bantukerja.com</h1>
-        <p>Bantu Kerja adalah platform berbasis web untuk membentuk kesiapan kerja generasi muda Indonesia (usia 14 - 24 tahun) lewat pembelajaran berbasis projek (Work-Based Learning) dengan berbagai modul belajar dan projek magang. </p>
+        <h1 class="font-bold text-2xl">{{ selected.title }}</h1>
+        <p>{{selected.description}} </p>
         <h1 class="font-bold text-2xl">Stacks</h1>
         <div class="flex gap-5 justify-end">
-          <span class="bg-gray-300 px-4 py-2 rounded-2xl">PHP</span>
-          <span class="bg-gray-300 px-4 py-2 rounded-2xl">Laravel 6</span>
-          <span class="bg-gray-300 px-4 py-2 rounded-2xl">Bootstrap</span>
-          <span class="bg-gray-300 px-4 py-2 rounded-2xl">Jquery</span>
-          <span class="bg-gray-300 px-4 py-2 rounded-2xl">Vue 2</span>
-
+          <span class="bg-gray-300 px-4 py-2 rounded-2xl" v-for="item in selected.stacks">{{ item }}</span>
         </div>
         <h1 class="font-bold text-2xl">Contributions</h1>
         <ul class="">
-          <li>Creating notification system for user side -</li>
-          <li>Admin dashboard backend -</li>
-          <li>Subscription system and integrating payment gateway -</li>
-          <li>User Realtime Chat -</li>
+          <li v-for="item in selected.contribution">{{item}} -</li>
         </ul>
       </div>
     </div>
