@@ -47,59 +47,60 @@ function select(index)
 </script>
 
 <template>
-<section>
-  <div class="h-screen flex flex-col items-center justify-center">
-    <div class="w-full flex flex-col gap-12">
-      <h1 class="text-3xl font-bold text-right">Web Apps</h1>
-      <nav class=" h-20 w-full  items-center text-gray-700 flex flex-row gap-4  max-h-32 z-10 rounded-3xl">
+  <section>
+    <div class="h-screen flex flex-col items-center justify-center">
+      <div class="w-full flex flex-col gap-12 ">
+        <h1 class="text-3xl font-bold text-left">Games</h1>
+        <nav class=" h-20 w-full  items-center text-gray-700 flex flex-row gap-4  max-h-32 z-10 rounded-3xl">
 
-        <div class="grow">
-          <div class="flex flex-row justify-center mr-6 gap-5">
-            <div v-for="(item,index) in items">
-              <button class="py-2 px-3 bg-gray-100  hover:bg-coffee-light rounded-2xl flex flex-row gap-2" @click="select(index)">
-                <img :src="item.icon" alt="" class="h-7 w-7 rounded-lg object-contain"
-                ><span>{{ item.menu}}</span>
-              </button>
+          <div class="grow">
+            <div class="flex flex-row justify-center mr-6 gap-5">
+              <div v-for="(item,index) in items">
+                <button class="py-2 px-3 bg-gray-100  hover:bg-coffee-light rounded-2xl flex flex-row gap-2" @click="select(index)">
+                  <img :src="item.icon" alt="" class="h-7 w-7 rounded-lg object-contain"
+                  ><span>{{ item.menu}}</span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </div>
-    <div class="grid grid-cols-2 mt-5 ">
-      <div class="flex flex-col gap-3">
-        <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide" class=" rounded-2xl overflow-clip">
-          <Slide v-for="slide in selected.images" :key="slide" >
-            <div class="carousel__item h-full"><img :src="slide" alt="" class="h-full object-coverstatus"></div>
-          </Slide>
-        </Carousel>
-
-        <Carousel
-            id="thumbnails"
-            :items-to-show="4"
-            v-model="currentSlide"
-            ref="carousel"
-        >
-          <Slide v-for="(slide,index) in selected.images" :key="slide" class="m-1 rounded-xl overflow-clip !w-full hover:scale-125 transition ease-in-out hover:z-50">
-            <div class="carousel__item"  @click="slideTo(index)"><img :src="slide" alt=""></div>
-          </Slide>
-        </Carousel>
+        </nav>
       </div>
-      <div class="text-right flex flex-col gap-5 ms-12">
-        <h1 class="font-bold text-2xl">{{ selected.title }}</h1>
-        <p>{{selected.description}} </p>
-        <h1 class="font-bold text-2xl">Stacks</h1>
-        <div class="flex flex-wrap gap-5 justify-end">
-          <span class="bg-gray-300 px-4 py-2 rounded-2xl" v-for="item in selected.stacks">{{ item }}</span>
+      <div class="grid grid-cols-2 mt-5 me-5">
+
+        <div class="text-left flex flex-col gap-5 ">
+          <h1 class="font-bold text-2xl">{{ selected.title }}</h1>
+          <p>{{selected.description}} </p>
+          <h1 class="font-bold text-2xl">Stacks</h1>
+          <div class="flex flex-wrap gap-5 ">
+            <span class="bg-gray-300 px-4 py-2 rounded-2xl" v-for="item in selected.stacks">{{ item }}</span>
+          </div>
+          <h1 class="font-bold text-2xl">Contributions</h1>
+          <ul class="">
+            <li v-for="item in selected.contribution">{{item}} -</li>
+          </ul>
         </div>
-        <h1 class="font-bold text-2xl">Contributions</h1>
-        <ul class="">
-          <li v-for="item in selected.contribution">{{item}} -</li>
-        </ul>
+        <div class="flex flex-col gap-3">
+          <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide" class=" rounded-2xl overflow-clip">
+            <Slide v-for="slide in selected.images" :key="slide" >
+              <div class="carousel__item h-full"><img :src="slide" alt="" class="h-full object-coverstatus"></div>
+            </Slide>
+          </Carousel>
+
+          <Carousel
+              id="thumbnails"
+              :items-to-show="4"
+              v-model="currentSlide"
+              ref="carousel"
+          >
+            <Slide v-for="(slide,index) in selected.images" :key="slide" class="m-1 rounded-xl overflow-clip !w-full hover:scale-125 transition ease-in-out hover:z-50">
+              <div class="carousel__item"  @click="slideTo(index)"><img :src="slide" alt=""></div>
+            </Slide>
+          </Carousel>
+        </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
 </template>
 <style scoped>
 :deep(#thumbnails  .carousel__track){

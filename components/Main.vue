@@ -13,6 +13,9 @@
   <div class="snap-center">
     <WebApps/>
   </div>
+  <div class="snap-center">
+    <Games/>
+  </div>
 </div>
 </template>
 

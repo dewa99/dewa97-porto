@@ -1,13 +1,8 @@
 
 <script setup >
-const portofolio = [
-  {img : 'luar_benteng_clas.png', title : "Bantu Belajar IPS - Ekspedisi Kaladuta" , category : "Mobile Game"},
-  {img : 'slide1.png', title : "Bantu Belajar IPS - Ekspedisi Kaladuta" , category : "Mobile Game"},
-  {img : 'slide2.png', title : "Bantu Belajar IPS - Ekspedisi Kaladuta" , category : "Mobile Game"},
-  {img : 'slide3.png', title : "Bantu Belajar IPS - Ekspedisi Kaladuta" , category : "Mobile Game"},
-]
 
-const selected = ref(portofolio[0])
+
+
 function select(item)
 {
   selected.value = item;
