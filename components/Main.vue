@@ -16,6 +16,9 @@
   <div class="snap-center">
     <Games/>
   </div>
+  <div class="snap-center">
+    <BackendServer/>
+  </div>
 </div>
 </template>
 

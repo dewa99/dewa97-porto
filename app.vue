@@ -22,6 +22,10 @@
 
 </script>
 <style>
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }

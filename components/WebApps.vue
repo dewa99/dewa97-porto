@@ -13,10 +13,10 @@ const items = [
   {title : 'Bantubelajar Website - bantubelajar.co.id',
     menu : 'Bantubelajar',
     icon : 'bantubelajar.png',
-    url : 'https://bantukerja.com',
-    description : 'Bantu Kerja adalah platform berbasis web untuk membentuk kesiapan kerja generasi muda Indonesia (usia 14 - 24 tahun) lewat pembelajaran berbasis projek (Work-Based Learning) dengan berbagai modul belajar dan projek magang.',
-    stacks : ['PHP','Laravel 6','Bootstrap', 'Jquery', 'Vue 2'],
-    contribution : ['Creating notification system for user side','Admin dashboard backend','Subscription system and integrating payment gateway','User Realtime Chat'],
+    url : 'https://bantubelajar.co.id',
+    description : 'Bantubelajar website adalah hub untuk games buatan matata yang dibuild untuk WebGL agar dapat dimainkan dalam browser. Bantubelajar website mengimplementasikan sistem berlangganan, pengguna yang tidak berlangganan tidak dapat membuka gamenya secara penuh (ingame content)',
+    stacks : ['PHP','Laravel 7','Bootstrap', 'Jquery', 'WebGL'],
+    contribution : ['Subscription system and integrating payment gateway','Creating admin dashboard backend','WebGL Content','Creating all the frontend'],
     images : ['bb/slide1.png','bb/slide2.png','bb/slide3.png','bb/slide4.png','bb/slide5.png']
   },
   {title : 'Klipingmu - klipingmu.com',
@@ -24,7 +24,7 @@ const items = [
     icon : 'klipingmu.png',
     url : 'https://klipingmu.com',
     description : 'Klipingmu adalah website news portal hub yang mengumpulkan dan menampilkan berita - berita terbaru dari beberapa sumber portal terkemuka agar pembaca berita lebih dapat merangkum apa yang terjadi pada hari ini ',
-    stacks : ['Javascript','Node JS','Express JS', 'Nuxt', 'Vue 3', 'Tailwind'],
+    stacks : ['Javascript','Node JS','Express JS', 'Nuxt 3', 'Vue 3', 'Tailwind'],
     contribution : ['Creating REST API and scrapper worker','Frontend Slicing',"Almost everything u see in there it's basically made by me"],
     images : ['klipingmu/slide1.png','klipingmu/slide2.png','klipingmu/slide3.png','klipingmu/slide4.png','klipingmu/slide5.png']
   }
@@ -47,7 +47,7 @@ function select(index)
 </script>
 
 <template>
-<section>
+<section id="web">
   <div class="h-screen flex flex-col items-center justify-center">
     <div class="w-full flex flex-col gap-12">
       <h1 class="text-3xl font-bold text-right">Web Apps</h1>

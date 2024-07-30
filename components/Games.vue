@@ -1,14 +1,15 @@
 <script setup >
 
 const items = [
-  {title : 'Bantukerja - bantukerja.com',
-    menu : 'Bantukerja',
-    icon : 'bantukerja.png',
-    url : 'https://bantukerja.com',
-    description : 'Bantu Kerja adalah platform berbasis web untuk membentuk kesiapan kerja generasi muda Indonesia (usia 14 - 24 tahun) lewat pembelajaran berbasis projek (Work-Based Learning) dengan berbagai modul belajar dan projek magang.',
-    stacks : ['PHP','Laravel 6','Bootstrap', 'Jquery', 'Vue 2'],
-    contribution : ['Creating notification system for user side','Admin dashboard backend','Subscription system and integrating payment gateway','User Realtime Chat'],
-    images : ['bk/slide5.png','bk/slide1.png','bk/slide2.png','bk/slide3.png','bk/slide4.png']
+  {title : 'Bantu Belajar IPS 7 - Ekspedisi Kaladuta',
+    menu : 'Ekspedisi Kaladuta',
+    icon : 'kaladuta.png',
+    url : 'https://play.google.com/store/apps/details?id=com.MatataEdu.BBIPS7&hl=id',
+    description : 'SERI BANTU BELAJAR IPS 7.\n' +
+        'Ekspedisi Kaladuta adalah game dengan genre Turn-Based RPG yang berlatar sejarah penyerangan Kota Batavia yang melawan VOC oleh Kerajaan Mataram pada tahun 1628-1629. Game ini tidak dibatasi untuk usia siswa tertentu karena bertujuan untuk memberikan kesempatan belajar pada siswa mengenai latar belakang peristiwa, para tokoh yang terlibat, serta situasi Kota Batavia saat itu yang sekarang berganti nama menjadi Kota Jakarta.\n',
+    stacks : ['C#','Unity 2021', 'Blender', 'Substance Painter','PHP'],
+    contribution : ['3D Environment Designer and Optimizations','3D Character Modeller and Optimizations','Backend Data Transactions','Google Play Publish'],
+    images : ['kaladuta/slide1.jpeg','kaladuta/slide2.png','kaladuta/slide3.png','kaladuta/slide4.png']
   },
   {title : 'Bantubelajar Website - bantubelajar.co.id',
     menu : 'Bantubelajar',
@@ -47,7 +48,7 @@ function select(index)
 </script>
 
 <template>
-  <section>
+  <section id="games">
     <div class="h-screen flex flex-col items-center justify-center">
       <div class="w-full flex flex-col gap-12 ">
         <h1 class="text-3xl font-bold text-left">Games</h1>
@@ -65,9 +66,9 @@ function select(index)
           </div>
         </nav>
       </div>
-      <div class="grid grid-cols-2 mt-5 me-5">
+      <div class="grid grid-cols-2 mt-5 ">
 
-        <div class="text-left flex flex-col gap-5 ">
+        <div class="text-left flex flex-col gap-5 me-5">
           <h1 class="font-bold text-2xl">{{ selected.title }}</h1>
           <p>{{selected.description}} </p>
           <h1 class="font-bold text-2xl">Stacks</h1>
@@ -76,7 +77,7 @@ function select(index)
           </div>
           <h1 class="font-bold text-2xl">Contributions</h1>
           <ul class="">
-            <li v-for="item in selected.contribution">{{item}} -</li>
+            <li v-for="item in selected.contribution">- {{item}}</li>
           </ul>
         </div>
         <div class="flex flex-col gap-3">
@@ -105,7 +106,7 @@ function select(index)
 <style scoped>
 :deep(#thumbnails  .carousel__track){
   display: grid ;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
 }
 </style>

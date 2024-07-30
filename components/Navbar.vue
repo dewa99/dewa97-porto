@@ -1,22 +1,22 @@
 <script setup >
 const menu = [
   {
-    url : '',
+    url : '/',
     icon : "ic:baseline-home",
     title : "Home",
   },
   {
-    url : '',
+    url : '#web',
     icon : "ic:baseline-web",
     title : "Web Apps",
   },
   {
-    url : '',
+    url : '#games',
     icon : "ic:baseline-videogame-asset",
     title : "Games",
   },
   {
-    url : '',
+    url : '#backend',
     icon : "ic:baseline-cloud",
     title : "Backend and Server",
   },
@@ -37,7 +37,7 @@ const menu = [
   <div class="grow">
     <div class="flex flex-row justify-end mr-6 gap-5">
       <div v-for="item in menu">
-        <a :href="item.url" class="flex items-center gap-1"> <Icon :name="item.icon" /> <span>{{item.title}}</span></a>
+        <a :href="item.url" class="flex items-center gap-1 transition-all duration-300"> <Icon :name="item.icon" /> <span>{{item.title}}</span></a>
       </div>
     </div>
   </div>
