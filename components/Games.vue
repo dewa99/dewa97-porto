@@ -7,18 +7,18 @@ const items = [
     url : 'https://play.google.com/store/apps/details?id=com.MatataEdu.BBIPS7&hl=id',
     description : 'SERI BANTU BELAJAR IPS 7.\n' +
         'Ekspedisi Kaladuta adalah game dengan genre Turn-Based RPG yang berlatar sejarah penyerangan Kota Batavia yang melawan VOC oleh Kerajaan Mataram pada tahun 1628-1629. Game ini tidak dibatasi untuk usia siswa tertentu karena bertujuan untuk memberikan kesempatan belajar pada siswa mengenai latar belakang peristiwa, para tokoh yang terlibat, serta situasi Kota Batavia saat itu yang sekarang berganti nama menjadi Kota Jakarta.\n',
-    stacks : ['C#','Unity 2021', 'Blender', 'Substance Painter','PHP'],
+    stacks : ['C#','Unity 2021', 'Blender', 'Substance Painter','PHP', 'MySql'],
     contribution : ['3D Environment Designer and Optimizations','3D Character Modeller and Optimizations','Backend Data Transactions','Google Play Publish'],
     images : ['kaladuta/slide1.jpeg','kaladuta/slide2.png','kaladuta/slide3.png','kaladuta/slide4.png']
   },
-  {title : 'Bantubelajar Website - bantubelajar.co.id',
-    menu : 'Bantubelajar',
-    icon : 'bantubelajar.png',
-    url : 'https://bantukerja.com',
-    description : 'Bantu Kerja adalah platform berbasis web untuk membentuk kesiapan kerja generasi muda Indonesia (usia 14 - 24 tahun) lewat pembelajaran berbasis projek (Work-Based Learning) dengan berbagai modul belajar dan projek magang.',
-    stacks : ['PHP','Laravel 6','Bootstrap', 'Jquery', 'Vue 2'],
-    contribution : ['Creating notification system for user side','Admin dashboard backend','Subscription system and integrating payment gateway','User Realtime Chat'],
-    images : ['bb/slide1.png','bb/slide2.png','bb/slide3.png','bb/slide4.png','bb/slide5.png']
+  {title : 'Uprising War of Independence',
+    menu : 'Uprising',
+    icon : 'uprsing.jpg',
+    url : 'https://play.google.com/store/apps/details?id=com.MatataEdu.Uprising',
+    description : 'Uprising War of Independence adalah FPS mobile game yang dibuat dengan tema perang kemerdekaan Indonesia. Mengambil setting di 3 tempat bersejarah seperti Tugu Yogyakarta, Pedesaan Ambarawa dan Hotel Oranje Surabaya. Menghadirkan 3 mode yaitu Team Deathmatch, Free for All dan Capture The Flag',
+    stacks : ['C#','Unity 2021','Blender', 'Substance Painter', 'Photon', 'PHP', 'MySql'],
+    contribution : ['Some 3D characters and maps modeller','Level designer','3D Optimizations','Backend deployment','Creating API for database integration'],
+    images : ['uprising/slide1.png','uprising/slide2.png','uprising/slide3.png','uprising/slide4.png']
   },
   {title : 'Klipingmu - klipingmu.com',
     menu : 'Klipingmu',
