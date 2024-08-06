@@ -23,7 +23,7 @@ const items = [
   {title : 'Kaladuta Auto Battle',
     menu : 'Auto Battle',
     icon : 'autobattle.png',
-    url : 'https://klipingmu.com',
+    url : 'https://play.google.com/store/apps/details?id=com.MatataEdu.KaladutaAutoBattle',
     description : 'Kaladuta Expedition Autobattle is a strategy game set during the historical attack on Batavia, occupied by the VOC, by the Mataram Kingdom in 1628-1629. This game is not limited to a specific age group as it aims to provide learning opportunities for students about the historical background of the event, the figures involved, and the situation in Batavia at that time, which is now known as Jakarta.',
     stacks : ['C#','Unity 2021','Blender', 'Substance Painter', 'PHP', 'MySQL'],
     contribution : ['Creating all the 3d models','Creating the UI',"Backend integration"],
