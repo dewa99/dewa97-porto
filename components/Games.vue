@@ -1,7 +1,7 @@
 <script setup >
 
 const items = [
-  {title : 'Bantu Belajar IPS 7 - Ekspedisi Kaladuta',
+  {title : 'Bantu Belajar IPS 7 - Ekspedisi Kaladuta (2021 - 2022)',
     menu : 'Ekspedisi Kaladuta',
     icon : 'kaladuta.png',
     url : 'https://play.google.com/store/apps/details?id=com.MatataEdu.BBIPS7&hl=id',
@@ -11,7 +11,7 @@ const items = [
     contribution : ['3D Environment Designer and Optimizations','3D Character Modeller and Optimizations','Backend Data Transactions','Google Play Publish'],
     images : ['kaladuta/slide1.jpeg','kaladuta/slide2.png','kaladuta/slide3.png','kaladuta/slide4.png']
   },
-  {title : 'Uprising War of Independence',
+  {title : 'Uprising War of Independence (2022 - 2023)',
     menu : 'Uprising',
     icon : 'uprsing.jpg',
     url : 'https://play.google.com/store/apps/details?id=com.MatataEdu.Uprising',
@@ -20,7 +20,7 @@ const items = [
     contribution : ['Some 3D characters and maps modeller','Level designer','3D Optimizations','Backend deployment','Creating API for database integration'],
     images : ['uprising/slide1.png','uprising/slide2.png','uprising/slide3.png','uprising/slide4.png']
   },
-  {title : 'Kaladuta Auto Battle',
+  {title : 'Kaladuta Auto Battle (2022)',
     menu : 'Auto Battle',
     icon : 'autobattle.png',
     url : 'https://play.google.com/store/apps/details?id=com.MatataEdu.KaladutaAutoBattle',

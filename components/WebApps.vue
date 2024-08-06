@@ -1,7 +1,7 @@
 <script setup >
 
 const items = [
-  {title : 'Bantukerja - bantukerja.com',
+  {title : 'Bantukerja - bantukerja.com (2020 - 2024)',
     menu : 'Bantukerja',
     icon : 'bantukerja.png',
     url : 'https://bantukerja.com',
@@ -10,7 +10,7 @@ const items = [
     contribution : ['Creating notification system for user side','Admin dashboard backend','Subscription system and integrating payment gateway','User Realtime Chat'],
     images : ['bk/slide5.png','bk/slide1.png','bk/slide2.png','bk/slide3.png','bk/slide4.png']
   },
-  {title : 'Bantubelajar Website - bantubelajar.co.id',
+  {title : 'Bantubelajar Website - bantubelajar.co.id (2021 - 2024)',
     menu : 'Bantubelajar',
     icon : 'bantubelajar.png',
     url : 'https://bantubelajar.co.id',
@@ -21,7 +21,7 @@ const items = [
     contribution : ['Subscription system and integrating payment gateway','Creating admin dashboard backend','WebGL Content','Creating all the frontend'],
     images : ['bb/slide1.png','bb/slide2.png','bb/slide3.png','bb/slide4.png','bb/slide5.png']
   },
-  {title : 'Klipingmu - klipingmu.com',
+  {title : 'Klipingmu - klipingmu.com (2023 - 2024)',
     menu : 'Klipingmu',
     icon : 'klipingmu.png',
     url : 'https://klipingmu.com',
