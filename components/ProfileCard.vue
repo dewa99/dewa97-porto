@@ -8,29 +8,32 @@ const timeline = [
 
 <template>
     <section>
-      <div class="grid grid-rows-2 h-screen items-center">
-        <div class="flex flex-row  gap-3">
+      <div class="lg:grid lg:grid-rows-2 sm:flex sm:flex-col sm:gap-3 h-screen lg:items-center">
+        <div class="flex lg:flex-row  sm:flex-col gap-3">
           <div class="my-auto ms-2">
             <h1 class="text-4xl font-bold">Introducing , me!</h1>
-            <p class="mt-5">I was born at Jember East Java Indonesia on first August 1997. <br>
-              Technology was my first interest in my life, i started operating personal computer at 10 playing "Game House's" games.
-              <br>
-              My first programming language was C# and Javascript through Unity 4, and i keep following and playing around with unity until now.
-              <br> After that i decided to get my Computer Science degree and work on a startup company called PT Matata Edukasi Inovasi.
-              <br> And that's how is my career begin!
+            <p class="mt-5 lg:pe-24 ">Born in Jember, East Java, Indonesia, in August 1997, I've always been captivated by technology. My journey began at age ten, experimenting with computers and playing games. I explored into programming with C# and JavaScript using Unity 4, a passion that continues to drive me. To further my knowledge, I pursued a Computer Science degree and working on a  startup called, PT Matata Edukasi Inovasi. This marked the beginning of my professional career.
             </p>
           </div>
-          <img src="../public/man(1).png" alt="" class="max-w-48 ml-auto mr-4">
+          <img src="../public/man(1).png" alt="" class="max-w-48 ml-auto mr-4 sm:hidden lg:block">
         </div>
         <div class="mb-auto ms-1">
-          <ol class="relative border-s border-gray-100 dark:border-gray-700">
-            <li class="ms-4 mb-4" v-for="item in timeline">
-              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{{item.year}}</time>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{item.title}}</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">{{item.description}}</p>
-            </li>
-          </ol>
+          <h1 class="text-2xl font-bold">Overall i'm proficient on</h1>
+          <div class="flex flex-wrap mt-5 lg:gap-3 sm:gap-1">
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Unity / C#</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Laravel / PHP</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Node JS</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Nuxt JS</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Vue JS</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Express JS</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Tailwind</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Python Djago/Flask</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">MySQL</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Ubuntu Server</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Apache/Nginx</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">Redis</div>
+            <div class="bg-gray-300 px-4 py-2 rounded-2xl">AWS Lightsail</div>
+          </div>
         </div>
 
       </div>

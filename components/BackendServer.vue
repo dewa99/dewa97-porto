@@ -8,7 +8,7 @@
       <div>
         <h1 class="font-bold text-3xl mb-3" >Backend and Server</h1>
         <p>As a fullstack i used to developed apps until it's live on production</p>
-        <span class="font-semibold mt-5">The stacks for backend and server i use is</span>
+        <span class="font-semibold mt-5">The stacks for backend and server i'm using : </span>
         <div class="flex flex-wrap mt-5 gap-3">
           <div class="bg-gray-300 px-4 py-2 rounded-2xl">Laravel</div>
           <div class="bg-gray-300 px-4 py-2 rounded-2xl">Express JS</div>

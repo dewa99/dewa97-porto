@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<div class="translate-x-24 translate-y-20 px-40 text-gray-700 leading-6 snap-mandatory snap-y h-screen overflow-scroll">
+<div class="lg:translate-x-24 sm:px-6 lg:translate-y-20 sm:translate-y-20 lg:px-40 text-gray-700 leading-6 snap-mandatory snap-y h-screen overflow-scroll">
   <div class="snap-center">
     <Hero/>
   </div>
