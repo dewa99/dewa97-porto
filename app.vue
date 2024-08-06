@@ -9,6 +9,8 @@
   import { useFlowbite } from '/composables/useFlowbite';
   import Main from "~/components/Main.vue";
   useHead({
+    title : "Dewa - Porto",
+    link : [{rel : "icon" , type : "image/png", href : "dewanobg.png"}],
     bodyAttrs : {
       class : 'bg-gray-200'
     }
