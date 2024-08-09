@@ -15,10 +15,11 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
     devtools: { enabled: true },
-    modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "vue3-carousel-nuxt"],
+    modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "vue3-carousel-nuxt",'@sidebase/nuxt-pdf'],
     fonts : {
         families : [
-            {name : "Roboto", provider : 'google'}
+            {name : "Roboto", provider : 'google'},
+            {name : "Raleway", provider : 'google'},
         ],
         defaults : {
             weights : [100,400,500,600,700,800],

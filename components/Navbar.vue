@@ -20,6 +20,11 @@ const menu = [
     icon : "ic:baseline-cloud",
     title : "Backend and Server",
   },
+  {
+    url : '/cv',
+    icon : "ic:outline-file-present",
+    title : "CV",
+  },
   // {
   //   url : '',
   //   icon : "ic:baseline-blender",
