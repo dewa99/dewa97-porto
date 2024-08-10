@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <section id="cv" class="text-gray-700 p-12 flex">
-    <div class="w-[770px] h-[1300px] max-w-[970px]  max-h-[1300px] grow bg-white mx-auto" ref="pdfSection">
+  <section id="cv" class="text-gray-700 lg:p-12 flex w-full">
+    <div class="min-w-[820px] min-h-[1300px] max-w-[970px]  max-h-[2000px] grow bg-white mx-auto" ref="pdfSection">
       <div class=" p-24 divide-y">
 <!--        header-->
         <div class="grid grid-cols-2 divide-x pb-5">
