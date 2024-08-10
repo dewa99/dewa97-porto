@@ -38,9 +38,9 @@ const menu = [
   <div class="text-center font-black text-2xl bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent p-5">
     <span>DewZ</span>
   </div>
-  <div class="font-semibold lg:ml-64 sm:ml-auto sm:max-w-screen sm:pr-4 sm:flex sm:gap-2">
+  <div class="font-semibold lg:translate-x-32 sm:ml-auto sm:max-w-screen sm:pr-4 sm:flex sm:gap-2">
     <span class="inline-flex gap-1 items-center"> <Icon name="mdi:gmail" class="text-xl"/> dodeardi@gmail.com</span>
-    <a href="/cv" class="flex items-center gap-1 transition-all duration-300"> <Icon name="ic:outline-file-present" /> <span>CV</span></a>
+    <a href="/cv" class="flex items-center gap-1 transition-all duration-300 lg:hidden sm:block"> <Icon name="ic:outline-file-present" /> <span>CV</span></a>
   </div>
   <div class="grow lg:block sm:hidden">
     <div class="flex flex-row justify-end mr-6 gap-5">
